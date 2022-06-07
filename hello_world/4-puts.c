@@ -2,12 +2,10 @@
 #include <string.h>
 
 /**
-* main - An int is a keyword that references an integer data type 
-* puts - Writes the given string to the standard output stream stdout
+* main - Entry point
 *
-* Return: Standard output
+* Return: Always 0 (Success)
 */
-
 int main(void)
 {
 	char str[] = "\"Programming is like building a multilingual puzzle";
