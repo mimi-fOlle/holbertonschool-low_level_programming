@@ -7,6 +7,12 @@
 */
 
 int main(void)
-
-	int = n
-	for (n = 0;
+{
+	char ch = '0';
+	for(ch = '0'; ch <= '9'; ch++)
+	{
+		putchar (ch);
+	}
+	putchar (10);
+	return (0);
+}
