@@ -2,10 +2,12 @@
 #include <string.h>
 
 /**
-* puts - writes the given string to the standard output stream stdout
+* main - An int is a keyword that references an integer data type 
+* puts - Writes the given string to the standard output stream stdout
 *
-* Return: 
+* Return: Standard output
 */
+
 int main(void)
 {
 	char str[] = "\"Programming is like building a multilingual puzzle";
