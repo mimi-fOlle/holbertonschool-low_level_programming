@@ -6,7 +6,7 @@
 * main - Entry point
 * printf - Standard output
 * @n: First number
-* @LastDigit: Second number
+* @LD: Second number
 *
 * Return: Always 0 (Success)
 */
@@ -14,18 +14,18 @@
 int main(void)
 {
 	int n;
-	int LastDigit;
+	int LD;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	LastDigit = n % 10;
-		if (LastDigit > 5)
-		printf("Last digit of %d is %d and is greater than 5\n", n, LastDigit);
+	LD = n % 10;
+		if (LD > 5)
+		printf("Last digit of %d is %d and is greater than 5\n", n, LD);
 
-			else if (LastDigit == 0)
-			printf("Last digit of %d is %d and is 0\n", n, LastDigit);
+			else if (LD == 0)
+			printf("Last digit of %d is %d and is 0\n", n, LD);
 
 			else
-			printf("Last digit of %d is %d and is less than 6 and not 0\n", n, LastDigit);
+			printf("Last digit of %d is %d and is less than 6 and not 0\n", n, LD);
 	return (0);
 }
