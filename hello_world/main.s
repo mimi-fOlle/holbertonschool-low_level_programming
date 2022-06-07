@@ -3,7 +3,7 @@
 	.globl	main
 	.type	main, @function
 main:
-.LFB6:
+.LFB0:
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -11,20 +11,12 @@ main:
 	.cfi_offset 6, -16
 	movq	%rsp, %rbp
 	.cfi_def_cfa_register 6
-	subq	$16, %rsp
-	movl	$0, %edi
-	call	time@PLT
-	movl	%eax, %edi
-	call	srand@PLT
-	call	rand@PLT
-	subl	$1073741823, %eax
-	movl	%eax, -4(%rbp)
 	movl	$0, %eax
-	leave
+	popq	%rbp
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE6:
+.LFE0:
 	.size	main, .-main
 	.ident	"GCC: (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0"
 	.section	.note.GNU-stack,"",@progbits
