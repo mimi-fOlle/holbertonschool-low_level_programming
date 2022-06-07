@@ -3,8 +3,6 @@
 /**
 * main - Entry point
 * putchar - Write a character of unsigned char type, to stdout
-* @a: Alphabet starts
-* @z: Alphabet ends
 *
 * Return: Always 0 (Success)
 */
