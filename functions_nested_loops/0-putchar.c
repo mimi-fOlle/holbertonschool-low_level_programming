@@ -2,6 +2,7 @@
 #include "main.h"
 
 /**
+* main - Entry point
 * _putchar - writes the character c to stdout
 *
 * Return: Always 0 (Success)
@@ -9,7 +10,6 @@
 
 int main(void)
 {
-
 	_putchar(95);
 	_putchar(112);
 	_putchar(117);
