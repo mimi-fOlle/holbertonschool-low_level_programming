@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
-* islower - check for a lowercase character
+* _islower - check for a lowercase character
 * @c: character
 *
 * Return: Always 0
