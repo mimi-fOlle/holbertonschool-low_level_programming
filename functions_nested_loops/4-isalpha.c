@@ -3,16 +3,15 @@
 #include "main.h"
 
 /**
-* islower - check for a lowercase character
+* isalpha - check for an alphabetic character
 * @c: character
 *
 * Return: Always 0
 */
 
-int _islower(int c)
+int _isalpha(int c)
 {
-
-	if (islower(c))
+	if (isalpha(c))
 	{
 		return (1);
 	}
