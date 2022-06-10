@@ -2,33 +2,23 @@
 #include "main.h"
 
 /**
-*
-*
+* times_table - 2 dimension
+* @n: number
+* @j: number
 *
 */
 
 void times_table(void)
 {
 	int n;
+	int j;
+
 	for (n = 0; n <= 9; n++)
 	{
-		_putchar(n);
-		
-		if (n != 9)
+		for (j = 0; j <= 9; j++)
 		{
-		_putchar(44);
-		_putchar(32);
+			_putchar(n * j);
 		}
 	}
 	_putchar(10);
 }
-
-	int n=0; j;
-	while (n <= 9)
-	{
-		j=1;
-		while (j <= 9)
-		{
-			_putchar((n^
-			n++;
-			j++;
