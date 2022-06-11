@@ -4,7 +4,6 @@
 /**
 * print_to_98 - print number till 98
 * @n: number
-* @i: number
 */
 
 void print_to_98(int n)
