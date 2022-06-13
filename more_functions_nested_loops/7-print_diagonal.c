@@ -4,22 +4,28 @@
 /**
 * print_diagonal - draw a diagonal line
 * @n: number
-*
+* x - vertical line for loop
+* y - horizon line for loop
 */
 
 void print_diagonal(int n)
 {
 	int x;
+	int y;
 
-	for (n = 1; n < 100; n++)
+	for (x = 0; x < n; x++)
 	{
-		for (x = 1; x < 100; x++)
+		for (y = 0; y < n; y++)
 		{
-			if (n == x)
+			if (x == y)
 			{
 				_putchar(92);
+				_putchar(10);
+			}
+			else if (x > y)
+			{
+				_putchar(' ');
 			}
 		}
 	}
-	_putchar(10);
 }
