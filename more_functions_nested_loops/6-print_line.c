@@ -3,20 +3,18 @@
 
 /**
 * print_line - draw straight line
-* @n: number
+* @n: input number
+* @i: number for loop
 *
 */
 
 void print_line(int n)
 {
-	if (n <= 0)
-	{
-		_putchar(10);
+	int i;
 
-	for (n = 1; n < 100; n++)
+	for (i = 0; i < n; i++)
 	{
 		_putchar('_');
-	}
 	}
 	_putchar(10);
 }
