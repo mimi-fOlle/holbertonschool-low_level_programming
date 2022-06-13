@@ -5,8 +5,8 @@
 * mul - multiply integer numbers
 * @a: number
 * @b: number
-* result - ouput result
 *
+* Return: result of value
 */
 
 int mul(int a, int b)
