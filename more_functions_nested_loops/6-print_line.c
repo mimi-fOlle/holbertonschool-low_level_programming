@@ -4,7 +4,7 @@
 /**
 * print_line - draw straight line
 * @n: input number
-* @i: number for loop
+* i - number for loop
 *
 */
 
