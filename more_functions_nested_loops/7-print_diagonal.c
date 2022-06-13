@@ -28,7 +28,7 @@ void print_diagonal(int n)
 			}
 		}
 	}
-	if ((x <= 0) && (y <= 0))
+	if (n <= 0)
 	{
 		_putchar(10);
 	}
