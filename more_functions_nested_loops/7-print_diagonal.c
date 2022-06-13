@@ -26,10 +26,10 @@ void print_diagonal(int n)
 			{
 				_putchar(' ');
 			}
-			else if ((x <= 0) && (y <= 0))
-			{
-				_putchar(10);
-			}
 		}
+	}
+	if ((x <= 0) && (y <= 0))
+	{
+		_putchar(10);
 	}
 }
