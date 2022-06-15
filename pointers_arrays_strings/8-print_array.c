@@ -12,14 +12,13 @@ void print_array(int *a, int n)
 {
 	int z;
 
-	for (z = 0; z <= 300; z++)
-	{
-	}
-		for (n = 0; n < z; n++)
+		for (z = 0; z < n; z++)
 		{
-			printf("%i", a[n]);
+			printf("%d", a[z]);
 
-		if (n < (z - 1))
+			if (z == n - 1)
+				continue;
+
 			printf(", ");
 		}
 	printf("\n");
