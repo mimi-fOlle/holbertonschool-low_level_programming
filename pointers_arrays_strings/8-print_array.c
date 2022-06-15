@@ -11,14 +11,17 @@
 void print_array(int *a, int n)
 {
 
-	int z = 300;
+	int z;
 
-	for (n = 0; n < z; n++)
+	for (z = 0; z <= 300; z++)
 	{
-		printf("%i", a[n]);
+		for (n = 0; n < z; n++)
+		{
+			printf("%i", a[n]);
 
 		if (n < (z - 1))
 			printf(", ");
+		}
 	}
 	printf("\n");
 }
