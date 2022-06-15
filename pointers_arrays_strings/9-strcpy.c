@@ -2,14 +2,27 @@
 #include "main.h"
 
 /**
-* strcpy - copy the string pointed to by src, including (\0), to the buffer pointed to by dest
-* @dest: pointer parameter that points to the adress of a varialbe of type char
-* @src: pointer parameter that points to the adress of a variable of type char
+* _strcpy - copy the string pointed to by src, to the buffer pointed to by dest
+* @dest: pointer to the destination array where the content is to be copied
+* @src: the string to be copied
 *
-* return: 
-*/
+* Return: the pointer to dest
+ */
 
 char *_strcpy(char *dest, char *src)
 {
-	int
+	int i;
+	int j = 98;
+
+	for (i = 0; src[i] != '\0'; i++)
+	{
+		if (i < j)
+
+			dest[i] = src[i];
+	}
+	for (; i < j; i++)
+	{
+		dest[i] = '\0';
+	}
+	return (dest);
 }
