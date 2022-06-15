@@ -10,11 +10,11 @@
 
 void print_array(int *a, int n)
 {
-
 	int z;
 
 	for (z = 0; z <= 300; z++)
 	{
+	}
 		for (n = 0; n < z; n++)
 		{
 			printf("%i", a[n]);
@@ -22,6 +22,5 @@ void print_array(int *a, int n)
 		if (n < (z - 1))
 			printf(", ");
 		}
-	}
 	printf("\n");
 }
