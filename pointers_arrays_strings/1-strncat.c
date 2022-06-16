@@ -2,10 +2,10 @@
 #include "main.h"
 
 /**
-* strncat - concatenate two strings not more than n bytes
+* _strncat - concatenate two strings not more than n bytes
 * @src: the string to be appended
 * @dest: pointer to the destination array
-* @n: 
+* @n: bytes
 *
 * Return: point to the resulting string dest
 */
@@ -16,11 +16,11 @@ char *_strncat(char *dest, char *src, int n)
 
 	for (ldest = 0; dest[ldest] != '\0'; ldest++)
 		;
-	for (lsrc = 0; src[lsrc] != '\0'; lsrc++)
-		;
-	for (n = 0; n <= lsrc; n++)
+
+	for (lsrc = 0; src[lsrc] && n > lsrc; lsrc++)
 	{
-		dest[lsrc] = src[n];
+		dest[ldest] = src[lsrc];
+		ldest++;
 	}
 	return (dest);
 }
