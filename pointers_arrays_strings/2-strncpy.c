@@ -7,6 +7,7 @@
 * @src: the string to be copied
 * @n : number of input
 *
+* Return: dest
 */
 
 char *_strncpy(char *dest, char *src, int n)
