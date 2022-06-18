@@ -21,11 +21,11 @@ int _strcmp(char *s1, char *s2)
 	for (i = 0; (i < ls1) || (i < ls2); i++)
 	{
 		if ((i < ls1) && (i < ls2))
-			sums = sums + (s1[i] - s2[i]);
+			return (s1[i] - s2[i]);
 		else if ((i < ls1) && (i > ls2))
-			sums = sums + s1[i];
-		else if ((i > ls1) && (i < ls2))
-			sums = sums - s2[i];
+			return (s1[i]);
+		else if ((i >= ls1) && (i < ls2))
+			return (s2[i]);
 	}
 	return (sums);
 }
