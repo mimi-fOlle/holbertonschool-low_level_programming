@@ -12,7 +12,6 @@
 int _strcmp(char *s1, char *s2)
 {
 	int ls1, ls2, i;
-	int sums = 0;
 
 	for (ls1 = 0; s1[ls1] != '\0'; ls1++)
 		;
@@ -20,12 +19,8 @@ int _strcmp(char *s1, char *s2)
 		;
 	for (i = 0; (i < ls1) || (i < ls2); i++)
 	{
-		if ((i < ls1) && (i < ls2))
+		if (s1[i] != s2[i])
 			return (s1[i] - s2[i]);
-		else if ((i < ls1) && (i > ls2))
-			return (s1[i]);
-		else if ((i >= ls1) && (i < ls2))
-			return (s2[i]);
 	}
-	return (sums);
+	return (0);
 }
