@@ -11,16 +11,21 @@
 
 int _strcmp(char *s1, char *s2)
 {
-	int i;
-	int j;
+	int ls1, ls2, i;
+	int sums = 0;
 
-	for (i = 0; s1[i] != '\0'; i++)
+	for (ls1 = 0; s1[ls1] != '\0'; ls1++)
 		;
-	for (j = 0; s2[j] != '\0'; j++)
+	for (ls2 = 0; s2[ls2] != '\0'; ls2++)
 		;
-	if (i > j)
-		return (s1[i] - s2[j]);
-	else if (i < j)
-		return (s1[i] - s2[j]);
-	return (0);
+	for (i = 0; (i < ls1) || (i < ls2); i++)
+	{
+		if ((i < ls1) && (i < ls2))
+			sums = sums + (s1[i] - s2[i]);
+		else if ((i < ls1) && (i > ls2))
+			sums = sums + s1[i];
+		else if ((i > ls1) && (i < ls2))
+			sums = sums - s2[i];
+	}
+	return (sums);
 }
