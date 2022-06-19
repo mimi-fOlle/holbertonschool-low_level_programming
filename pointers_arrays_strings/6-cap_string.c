@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -9,29 +8,30 @@
 
 char *cap_string(char *s)
 {
-	int i,
+	int i;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (i == 0) /**check first character is lowercase*/
+		if (i == 0 || s[i] == ' ' || s[i] == '	' || s[i] == '\n')
 		{
-			if ((s[i] >= 'a' && ((s[i] <= 'z'))
-						s[i] = s[i] - 32;
+			if (s[i+1] >= 'a' && s[i+1] <= 'z')
+				s[i+1] = s[i+1] - 32;
 		}
-		if (s[i] == ' ') /**check space*/
+		if (s[i] == ',' || s[i] == ';' || s[i] == '.' || s[i] == '!')
 		{
-			++i; /**if space is found, check next alphabet*/
-			if ((s[i] >= 'a' && s[i] <= 'z')
-				{
-					s[i] = s[i] - 32;
-				}
-		else
+			if (s[i+1] >= 'a' && s[i+1] <= 'z')
+				s[i+1] = s[i+1] - 32;
+		}
+		if (s[i] == '?' || s[i] == '"' || s[i] == '(' || s[i] == ')')
 		{
-			if (s[i] <= 'A' && s[i] >= 'Z')
-				s[i] = s[i] + 32;
-
-
+			if (s[i+1] >= 'a' && s[i+1] <= 'z')
+				s[i+1] = s[i+1] - 32;
 		}
+		if (s[i] == '{' || s[i] == '}')
+		{
+			if (s[i+1] >= 'a' && s[i+1] <= 'z')
+				s[i+1] = s[i+1] - 32;
 		}
-		return (0);
+	}
+		return (s);
 }
