@@ -16,7 +16,10 @@ char *string_toupper(char *s)
 	for (i = 0; s[i] != '\0'; i++) /**For loop to read each alphabet*/
 	{
 		if (s[i] >= 'a' && s[i] <= 'z')
-			s[i] = s[i] - 32;
+		{
+
+			s[i] = s[i] - 32; /**A - a = 32*/
+		}
 	}
-	return (0);
+	return (s);
 }
