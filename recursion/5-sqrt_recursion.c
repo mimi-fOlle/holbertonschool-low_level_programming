@@ -34,11 +34,11 @@ int _sqrt_tmp(long int it, long int n)
 
 int _sqrt_recursion(int n)
 {
-	if (n % 2 == 0 || n % 3 == 0 || n % 5 == 0 || n % 7 == 0)
-		return (_sqrt_tmp(1, n));
 	if (n == 1)
 		return (1);
 	if (n < 0)
 		return (-1);
+	if (n % 2 == 0 || n % 3 == 0 || n % 5 == 0 || n % 7 == 0)
+		return (_sqrt_tmp(1, n));
 	return (0);
 }
