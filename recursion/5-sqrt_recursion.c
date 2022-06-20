@@ -10,9 +10,9 @@
 * Return: square number
 */
 
-int _sqrt_tmp(int it, int n)
+int _sqrt_tmp(long int it, long int n)
 {
-	int tmp;
+	int long tmp;
 
 	tmp = (it + n / it) / 2;
 	if (((it * it) <= n) && ((it + 1) * (it + 1)) > n)
@@ -38,6 +38,7 @@ int _sqrt_recursion(int n)
 		return (_sqrt_tmp(1, n));
 	if (n == 1)
 		return (1);
-	else
+	if (n < 0)
 		return (-1);
+	return (0);
 }
