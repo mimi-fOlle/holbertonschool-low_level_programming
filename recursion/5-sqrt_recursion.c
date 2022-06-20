@@ -3,20 +3,19 @@
 #include <math.h>
 
 /**
-* _sqrt_recursion - return the natural square root of a number
-* @n: natural square root
+* _sqrt_tmp - return the natural square root of a number
+* @it: start from 1
+* @n: natural square number
 *
-* Return: Always 0
+* Return: square number
 */
-
-
 
 int _sqrt_tmp(int it, int n)
 {
 	int tmp;
-	
+
 	tmp = (it + n / it) / 2;
-	if (((it * it) <= n) && ((it + 1) * (it + 1 )) > n)
+	if (((it * it) <= n) && ((it + 1) * (it + 1)) > n)
 	{
 		return (it);
 	}
@@ -25,6 +24,13 @@ int _sqrt_tmp(int it, int n)
 		return (_sqrt_tmp(tmp, n));
 	}
 }
+
+/**
+* _sqrt_recursion - return the natural square root of a number
+* @n: natural square root
+*
+* Return: square number
+*/
 
 int _sqrt_recursion(int n)
 {
