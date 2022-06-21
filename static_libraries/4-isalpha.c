@@ -1,18 +1,22 @@
 #include <stdio.h>
+#include <ctype.h>
 #include "main.h"
 
 /**
-* print_alphabet -Entry point
+* _isalpha - check for an alphabetic character
+* @c: character
 *
+* Return: Always 0
 */
 
-void print_alphabet(void)
+int _isalpha(int c)
 {
-	char ch;
-
-	for (ch = 'a'; ch <= 'z'; ch++)
+	if (isalpha(c))
 	{
-		_putchar(ch);
+		return (1);
 	}
-	_putchar(10);
+	else
+	{
+		return (0);
+	}
 }
