@@ -4,8 +4,8 @@
 
 /**
 * free_grid - free a 2 dimensional grid previously created
-* grid: grid have been created
-* height: height of dimension
+* @grid: grid have been created
+* @height: height of dimension
 *
 */
 
