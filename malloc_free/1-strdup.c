@@ -11,21 +11,23 @@
 
 char *_strdup(char *str)
 {
-	char *i;
-	int s, t = 0;
+	int i, j;
+	char *box2;
 
-	if (str == NULL)
+	if (str == NULL || str == 0)
 		return (NULL);
-	for (s = 0; str[s]; s++)
-		t++;
-	i = malloc(sizeof(char) * (t + 1));
-	if (i == NULL)
+
+	for (i = 0; str[i]; i++)
+		;
+	box2 = malloc(sizeof(char) * i);
+	if (box2 == NULL)
 	{
-		free(i);
+		printf("Error on malloc str dump");
 		return (NULL);
 	}
-	for (s = 0; str[s]; s++)
-		i[s] = str[s];
-	i[t] = '\0';
-	return (i);
+	for (j = 0; str[j]; j++)
+	{
+		box2[j] = str[j];
+	}
+	return (box2);
 }
