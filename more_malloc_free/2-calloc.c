@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
-* calloc - allocate memory for an array
+* _calloc - allocate memory for an array
 * @nmemb: element
 * @size: size
 *
@@ -18,7 +18,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-	ptr = malloc(sizeof(unsigned int) * size);
+	ptr = malloc(size);
 	if (ptr == NULL)
 	{
 		return (NULL);
