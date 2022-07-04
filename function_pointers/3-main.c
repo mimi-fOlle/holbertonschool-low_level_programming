@@ -21,8 +21,8 @@ int main(int argc, char **argv)
 		exit(98);
 	}
 
-	if (*argv[2] != 43 && *argv[2] != 45 && *argv[2] != 42
-&& *argv[2] != 47 && *argv[2] != 37)
+	if ((*argv[2] != 43 && *argv[2] != 45 && *argv[2] != 42
+&& *argv[2] != 47 && *argv[2] != 37) || strlen(argv[2]) != 1)
 	{
 		printf("Error\n");
 		exit(99);
