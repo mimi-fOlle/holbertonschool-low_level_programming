@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
+#include <string.h>
 #include "variadic_functions.h"
 
 /**
@@ -11,11 +12,11 @@
 
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-	va_list ap;
+	va_list ap, apcpy;
 	unsigned int i;
 
 	va_start(ap, n);
-
+	va_copy(apcpy, ap);
 
 	if (separator == NULL)
 		separator = "";
@@ -26,15 +27,11 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			printf("%s%s", va_arg(ap, char*), separator);
 		if (i == n)
 			printf("%s", va_arg(ap, char*));
+		if (i < n && va_arg(apcpy, char*) == NULL)
+			printf("(nil)");
 
-
-/**
-		if (separator != NULL)
-			printf("%s", va_arg(ap, char*));
-		if (va_arg(ap, char*) == NULL)
-printf("(nil)");
-*/
 	}
+	va_end(apcpy);
 	va_end(ap);
 	printf("\n");
 }
