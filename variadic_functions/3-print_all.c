@@ -29,11 +29,6 @@ void stringprint(va_list va)
 	printf("%s", va_arg(va, char *));
 }
 
-void nilprint(va_list va)
-{
-	printf("(nil)%s", va_arg(va, char *));
-}
-
 void print_all(const char * const format, ...)
 {
 	va_list ap;
@@ -43,15 +38,14 @@ void print_all(const char * const format, ...)
 		{"c", charprint},
 		{"i", intprint},
 		{"f", floatprint},
-		{"s", stringprint},
-		{"", nilprint}
+		{"s", stringprint}
 	};
 
 	va_start(ap, format);
 
 	runFormat = 0;
 	runargs = 0;
-	
+
 	while (format && format[runargs])
 	{
 		while (fm[runFormat].t_short)
@@ -70,7 +64,6 @@ void print_all(const char * const format, ...)
 		runargs++;
 		runFormat = 0;
 	}
-
 	va_end(ap);
 	printf("\n");
 }
