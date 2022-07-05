@@ -54,7 +54,7 @@ void print_all(const char * const format, ...)
 			{
 				fm[runFormat].typeprint(ap);
 
-			if (format[runFormat + 1])
+			if (runFormat < (int)strlen(format) - 1)
 				printf(", ");
 			}
 			runFormat++;
