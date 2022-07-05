@@ -16,7 +16,7 @@ void charprint(va_list va)
 
 void intprint(va_list va)
 {
-	printf("%d", va_arg(va, int));
+	printf("%d", va_arg(va, unsigned int));
 }
 
 void floatprint(va_list va)
