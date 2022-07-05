@@ -57,7 +57,6 @@ void print_all(const char * const format, ...)
 				if (runargs < (int)strlen(format) - 1)
 				{
 					printf(", ");
-					runargs++;
 				}
 			}
 			runFormat++;
