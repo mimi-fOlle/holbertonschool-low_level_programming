@@ -28,10 +28,15 @@ void stringprint(va_list va)
 {
 	char *str = va_arg(va, char *);
 	if (str==NULL)
+	{
 		printf("(nil)");
-	else
-		printf("%s", str);
-}
+		exit(0);
+	}
+	printf("%s", str);
+	/*
+	printf("4%s", va_arg(va, char *));
+*/
+	}
 
 void nilprint(va_list va)
 {
@@ -45,11 +50,11 @@ void print_all(const char * const format, ...)
 	int runargs, runFormat;
 
 	struct type_t fm[] = {
-		{'c', charprint},
-		{'i', intprint},
-		{'f', floatprint},
-		{'s', stringprint},
-		{0, nilprint}
+		{"c", charprint},
+		{"i", intprint},
+		{"f", floatprint},
+		{"", nilprint},
+		{"s", stringprint}
 	};
 
 	va_start(ap, format);
@@ -61,7 +66,7 @@ void print_all(const char * const format, ...)
 	{
 		while (fm[runFormat].t_short)
 		{
-			if (format[runargs] == fm[runFormat].t_short)
+			if (format[runargs] == *fm[runFormat].t_short)
 			{
 				fm[runFormat].typeprint(ap);
 

@@ -11,7 +11,7 @@
 */
 struct type_t
 {
-	char t_short;
+	char *t_short;
 	void (*typeprint)(va_list);
 };
 
