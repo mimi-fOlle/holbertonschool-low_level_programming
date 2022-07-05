@@ -26,22 +26,12 @@ void floatprint(va_list va)
 
 void stringprint(va_list va)
 {
-	char *str = va_arg(va, char *);
-	if (str==NULL)
-	{
-		printf("(nil)");
-		exit(0);
-	}
-	printf("%s", str);
-	/*
-	printf("4%s", va_arg(va, char *));
-*/
-	}
+	printf("%s", va_arg(va, char *));
+}
 
 void nilprint(va_list va)
 {
-	if (va_arg(va, double) != 0)
-		printf("(nil)");
+	printf("(nil)%s", va_arg(va, char *));
 }
 
 void print_all(const char * const format, ...)
@@ -53,8 +43,8 @@ void print_all(const char * const format, ...)
 		{"c", charprint},
 		{"i", intprint},
 		{"f", floatprint},
-		{"", nilprint},
-		{"s", stringprint}
+		{"s", stringprint},
+		{"", nilprint}
 	};
 
 	va_start(ap, format);
