@@ -31,7 +31,7 @@ void stringprint(va_list va)
 
 void print_all(const char * const format, ...)
 {
-	va_list ap, apcpy;
+	va_list ap;
 	int runargs, runFormat;
 
 	struct type_t fm[] = {
@@ -45,8 +45,8 @@ void print_all(const char * const format, ...)
 
 	runFormat = 0;
 	runargs = 0;
-
-	while (format[runargs] && strlen(format) != 0)
+	
+	while (format && format[runargs])
 	{
 		while (fm[runFormat].t_short)
 		{
@@ -64,7 +64,7 @@ void print_all(const char * const format, ...)
 		runargs++;
 		runFormat = 0;
 	}
-	va_end(apcpy);
+
 	va_end(ap);
 	printf("\n");
 }
