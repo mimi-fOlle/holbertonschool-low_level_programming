@@ -46,15 +46,15 @@ void print_all(const char * const format, ...)
 	runFormat = 0;
 	runargs = 0;
 
-	while (fm[runargs].t_short)
+	while (format[runargs])
 	{
 		while (fm[runFormat].t_short)
 		{
-			if (format[runFormat] == fm[runargs].t_short)
+			if (format[runargs] == fm[runFormat].t_short)
 			{
-				fm[runargs].typeprint(ap);
+				fm[runFormat].typeprint(ap);
 
-			if (fm[runargs + 1].t_short)
+			if (fm[runFormat + 1].t_short)
 				printf(", ");
 			}
 			runFormat++;
