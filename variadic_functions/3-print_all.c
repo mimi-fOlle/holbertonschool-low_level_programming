@@ -46,7 +46,7 @@ void print_all(const char * const format, ...)
 	runFormat = 0;
 	runargs = 0;
 
-	while (format[runargs] && format)
+	while (format[runargs] && format[0])
 	{
 		while (fm[runFormat].t_short)
 		{
