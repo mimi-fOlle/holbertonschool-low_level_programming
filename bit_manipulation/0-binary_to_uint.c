@@ -13,18 +13,22 @@
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int dec = 0;
-	int i;
-	int base = 1;
-	int len = strlen(b);
+	int i, base = 1;
 
-	for (i = len - 1; i >= 0; i--)
+	if (b == NULL)
+		return (0);
+
+	for (i = 0; b[i + 1]; i++)
 	{
 		if (b[i] != '0' && b[i] != '1')
 			return (0);
+	}
 
-		if (b[i] == '1')
-			dec += base;
+	while (i >= 0)
+	{
+		dec += ((b[i] - '0') * base);
 		base *= 2;
+		i--;
 	}
 	return (dec);
 }
