@@ -9,7 +9,9 @@
  */
 int main(void)
 {
-	print_binary(ULONG_MAX);
-	printf("\n");
+	int n;
+
+	n = get_bit(ULONG_MAX, 20000);
+	printf("%d\n", n);
 	return (0);
 }
