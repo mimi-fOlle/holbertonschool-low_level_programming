@@ -26,26 +26,24 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
-	{
-		free(buffer);
+	/*	free(buffer);*/
 		return (0);
-	}
 
 	size = read(fd, buffer, letters);
-	if (size == -1)
+/*	if (size == -1)
 	{
 		free(buffer);
 		close(fd);
 		return (0);
 	}
-
+*/
 	read_bytes = write(1, buffer, size);
 
-	free(buffer);
 	close(fd);
-
+	free(buffer);
+/**
 	if (read_bytes != size)
 		return (0);
-
-	return (size);
+*/
+	return (read_bytes);
 }
