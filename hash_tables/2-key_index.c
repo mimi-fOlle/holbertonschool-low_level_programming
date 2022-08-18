@@ -7,22 +7,22 @@
   * @key: The key
   * @size: The size of the array of the hash table
   *
-  * Return: The index at which the key/value pair should stored 
+  * Return: The index at which the key/value pair should stored
   * in the array of the hash table
   */
 
 unsigned long int key_index(const unsigned char *key, unsigned long int size)
 {
 	unsigned long int hash;
-	unsigned int index;
+	unsigned long int i;
 
 	hash = 0;
-	index = 0;
+	i = 0;
 
-	while (key && key[index])
+	while (key && key[i])
 	{
-		hash = (hash + key[index] % size);
-		index++;
+		hash = (hash + key[i] % size);
+		++i;
 	}
 	return (hash);
 }
