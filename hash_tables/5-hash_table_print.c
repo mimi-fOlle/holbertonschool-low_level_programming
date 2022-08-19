@@ -15,7 +15,7 @@ void hash_table_print(const hash_table_t *ht)
 
 	if (ht == NULL)
 		return;
-	
+
 	printf("{");
 
 	for (i = 0; i < ht->size; i++)
@@ -27,7 +27,7 @@ void hash_table_print(const hash_table_t *ht)
 				idx = 1;
 			else
 				printf(", ");
-			
+
 			printf("'%s': '%s'", node->key, node->value);
 			node = node->next;
 		}
