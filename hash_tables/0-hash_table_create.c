@@ -22,7 +22,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	new_table->array = calloc(new_table->size, sizeof(hash_node_t *));
 
 	for (i = 0; i < new_table->size; i++)
-		new_table->array[i] = NULL;
+		new_table->array[i] = NULL; /*make sure that the created HT is clear*/
 
 	return (new_table);
 }
