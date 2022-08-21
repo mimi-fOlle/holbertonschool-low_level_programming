@@ -25,11 +25,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	idx = key_index((const unsigned char *)key, ht->size);
 
 	if (value != NULL)
-		str = strdup(value);
+		str = strdup(value); /*copy value in the str*/
 	else
-		str = NULL;
+		str = NULL; /*if value is null then str is the same*/
 
-	node = ht->array[idx];
+	node = ht->array[idx]; /*put the right array of idx in node*/
 
 	if (node == NULL)
 		node = new_node(NULL);
