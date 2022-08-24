@@ -1,6 +1,14 @@
 #include "search_algos.h"
 #include <math.h>
 
+/**
+  * min - Find the minimum value
+  * @a: The value
+  * @b: The value
+  *
+  * Return: The minimum value
+  */
+
 unsigned long int min(unsigned long int a, unsigned long int b)
 {
 	if (b > a)
